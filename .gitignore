@@ -1,6 +1,7 @@
 [Dd]ebug/
 [Rr]elease/
 .vs/
+x64/
 
 *.ini
 *.lib
@@ -16,3 +17,4 @@
 *.db
 *.suo
 *.inc
+*.user
