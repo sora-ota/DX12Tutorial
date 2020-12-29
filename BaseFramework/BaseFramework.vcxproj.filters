@@ -4,18 +4,41 @@
     <Filter Include="src">
       <UniqueIdentifier>{68707571-97f3-4298-b243-aa7cf76e80a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="hlsl">
+      <UniqueIdentifier>{6a895065-c40f-4f59-9724-6fba5f5c2771}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\window.cpp">
+    <ClCompile Include="src\Direct3D.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\window.h">
+    <ClInclude Include="src\Direct3D.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Window.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\CommonDef.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="hlsl\BasicVertexShader.hlsl">
+      <Filter>hlsl</Filter>
+    </FxCompile>
+    <FxCompile Include="hlsl\BasicPixelShader.hlsl">
+      <Filter>hlsl</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hlsl\BasicShader.hlsli">
+      <Filter>hlsl</Filter>
+    </None>
   </ItemGroup>
 </Project>

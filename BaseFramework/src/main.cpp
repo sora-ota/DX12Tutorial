@@ -1,5 +1,5 @@
-#define STB_IMAGE_IMPLEMENTATION
-#include "window.h"
+#include "Window.h"
+#include "Direct3D.h"
 #include <crtdbg.h>
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpszArgs, int nWinMode)
@@ -10,11 +10,30 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpszArgs, int
 
 	WIN.InitWindow(hInstance, 1280, 720, "D3D12study");
 
-	//================================================
-	//メインループ
-	//================================================
-	while (WIN.ProcessMessage())
 	{
+		Direct3D d3d;
+		if (d3d.Initialize() == false)
+		{
+			printf("初期化失敗");
+			return 0;
+		}
+
+		if (d3d.TestInit() == false)
+		{
+			printf("初期化失敗");
+			return 0;
+		}
+
+		//================================================
+		//メインループ
+		//================================================
+		while (WIN.ProcessMessage())
+		{
+			d3d.Update();
+			d3d.Draw();
+		}
+
+		d3d.Release();
 	}
 
 	WIN.Release();

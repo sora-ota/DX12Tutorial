@@ -1,4 +1,4 @@
-#include "window.h"
+#include "Window.h"
 #include <stdio.h>
 
 bool Window::InitWindow(HINSTANCE hInstance, int w, int h, const char * name)

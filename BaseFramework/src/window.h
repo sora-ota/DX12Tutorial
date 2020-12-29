@@ -8,6 +8,9 @@ class Window
 public:
 	//ウィンドウハンドル取得
 	HWND GethWnd() { return m_hWnd; }
+	//サイズ取得
+	u32 GetWindowWidth() { return m_WindowWidth; }
+	u32 GetWindowHeight() { return m_WindowHeight; }
 	// マウスホイールの変化量を取得
 	int GetMouseWheelVal() const { return m_MouseWheelVal; }
 	//ウィンドウ作成、Direct3Dの初期化など
